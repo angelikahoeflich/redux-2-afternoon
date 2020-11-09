@@ -4,4 +4,4 @@ import budgetReducer from './budgetReducer';
 
 const rootReducer = combineReducers({budget: budgetReducer});
 
-export default 
+export default createStore(rootReducer, applyMiddleware(promiseMiddleware));
